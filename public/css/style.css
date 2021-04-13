@@ -12,7 +12,6 @@
 }
 
 
-
 .chart-img {
   height: 44%;
   border-radius: 2%;
@@ -117,11 +116,6 @@ td {
   width: 870px
 }
 
-#bortles-chart-img{
-  height: 780px;
-  width: 945px
-}
-
 #canvas {
   width: 100%;
   font-size: 8px;
@@ -131,3 +125,35 @@ td {
   height: 780px;
 }
 
+#bortles-two {
+  height: 40%;
+  border-radius: 2%;
+}
+
+#bortles-three {
+  height: 36.5%;
+  border-radius: 2%;
+}
+
+#blake-third-div {
+  height: 45em;
+}
+
+#derek-two {
+  height: 39%;
+  border-radius: 2%;
+}
+
+#derek-three {
+  height:36.5%;
+}
+
+#derek-third-div {
+  height: 45em;
+}
+
+#nfl-logo {
+  height: 25em;
+  margin: 0 auto;
+  display: block;
+}
