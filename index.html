@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+      crossorigin="anonymous"
+    />
+    <link href="./public/css/style.css" type=text/css rel="stylesheet" />
+    <script src=
+"https://code.jquery.com/jquery-3.5.1.js">
+    </script>
+    <title>Show Me the STATS</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/">Quarterbacks</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="./baker.html"
+                  >Baker Mayfield</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="blake.html">Blake Bortles</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="derek.html">Derek Carr</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- QB Holder -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <p>
+            Our Goal here at <strong>Show me the Stats (QB Edition)</strong> is
+            to present your favorite Quarterbacks seasonal data in a way that
+            makes sense! Think about how many times have you gone to a player's
+            stats page and seen data listed in tables. Now think about how long
+            it takes you to find the stats your looking for, and break it down.
+            Whether it be percentages, or yards per game or per opponent we
+            desire to <strong>VISUALIZE</strong> this data and let your
+            <strong>EYES</strong> do the thinking. 
+           
+          </p> 
+          <p>In these examples we have provided tables of each QB's Data for reference.</p>
+        </div>
+      </div>
+    </div>
+    <div class="container border border-secondary bg-dark">
+      <div class="row">
+        <div class="col-md-12">
+          <h3>Here are some featured QBs!</h3>
+          <p class="btn-inst">
+            <em
+              >Clicking the stats button will take you to some prototype statistics
+              visualizations where we talk about QB trends.</em
+            >
+          </p>
+          <!-- Baker -->
+          <div class="container qb-container border border-danger">
+            <div class="row">
+              <div class="col-md-4">
+                <img
+                  class="feature-img"
+                  src="https://static.nfl.com/static/content/public/static/img/fantasy/transparent/200x200/MAY483453.png"
+                />
+                <h4>
+                  <img
+                    class="feature-logo"
+                    src="https://static.trumedianetworks.com/images/nfl/teams/1050.png"
+                  />Baker Mayfield
+                </h4>
+                <h3>Season Breakdown</h3>
+                <p class="player-story">
+                  The Cleveland Brown's Baker Mayfield had a 2018 season was one
+                  for the record books. After not starting the first 3 games of
+                  the season he still managed to throw for 27 Touchdwons. That
+                  was the most by any rookie Quarterback since Peyton Manning or
+                  Russell Westbrook! He also managed to hold above a 50%
+                  Completion Percentage for 13 out of 14 games with 65.8% and a
+                  TD/INT Ratio of 1.92. Not bad. He was most definitely a
+                  crutial part the Browns completing a 7-8-1 season after a
+                  extremely disappointing 0-16 2017 regular season.
+                </p>
+              </div>
+              <div class="qb-story col-md-8">
+                
+                <a id="bakerBtn" type="button" class="btn btn-danger">2018 Visualized Stats</a>
+                <table class="bg-light" id="table">
+
+                  <tr>
+                    <th>Week</th>
+                    <th>Opponent</th>
+                    <th>Attempts</th>
+                    <th>Cpmpletions</th>
+                    <th>Sack</th>
+                    <th>Interceptions</th>
+                    <th>Passing yards</th>
+                    <th>Passing TDs</th>
+                    <th>Rush Attempts</th>
+                    <th>Rush Yards</th>
+                    <th>Rush TDs</th>
+                </tr>
+        
+              </table>
+              </div>
+            </div>
+          </div>
+          <!-- Blake -->
+          <div class="container qb-container border border-warning">
+            <div class="row">
+              <div class="col-md-4">
+                <img
+                  class="feature-img"
+                  src="https://static.nfl.com/static/content/public/static/img/fantasy/transparent/200x200/BOR650964.png"
+                />
+                <h4>
+                  <img
+                    class="feature-logo"
+                    src="https://static.trumedianetworks.com/images/nfl/teams/2250.png"
+                  />Blake Bortles
+                </h4>
+                <h5>Season Breakdown</h5>
+                <p class="player-story">
+                  The Jacksonville Jaguars Blake Bortles was in his 4th NFL
+                  season in 2018 and it was a bit of a struggle compared to his
+                  2017 season. Bortles and The Jags finished the 2017 season at
+                  the NFC Championships with a loss to the New England Patriots.
+                  The 2018 season ended with the Jags not making the playofs.
+                  Bortles finished 2018 with an average completion percentage of
+                  60%, butt in spite of this we see that for The 2018 season he
+                  finished with a TD/INT ratio of 1.18. YIKES!
+                </p>
+              </div>
+              <div class="qb-story col-md-8">
+                <a type="button" href="./blake.html" class="btn btn-warning">
+                  2018 Stats
+                </a>
+                <table class="bg-light" id="tabletwo">
+
+                  <tr>
+                    <th>Week</th>
+                    <th>Opponent</th>
+                    <th>Attempts</th>
+                    <th>Cpmpletions</th>
+                    <th>Sack</th>
+                    <th>Interceptions</th>
+                    <th>Passing yards</th>
+                    <th>Passing TDs</th>
+                    <th>Rush Attempts</th>
+                    <th>Rush Yards</th>
+                    <th>Rush TDs</th>
+                </tr>
+        
+              </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- Derek -->
+          <div class="container qb-container border border-light">
+            <div class="row">
+              <div class="col-md-4">
+                <img
+                  class="feature-img"
+                  src="https://static.nfl.com/static/content/public/static/img/fantasy/transparent/200x200/CAR358797.png"
+                />
+                <h4>
+                  <img
+                    class="feature-logo"
+                    src="https://static.trumedianetworks.com/images/nfl/teams/2520.png"
+                  />Derek Carr
+                </h4>
+                <h5>Season Breakdown</h5>
+                <p class="player-story">
+                  The Oakland Raiders Derek Carr boasts the highest average
+                  completion percantage of all of our featured QBs with a 69%
+                  and a TD/INT Ratio of 1.9. Despite His stats being a noteable
+                  highlight for our featured QBs the Raiders did not have the
+                  best of seasons only finishiing 4-12 and last in their
+                  division the AFC West.
+                </p>
+              </div>
+              <div class="qb-story col-md-8">
+                <a type="button" href="./derek.html" class="btn btn-light">2018 Stats</a>
+                <table class="bg-light" id="tablethree">
+
+                <tr>
+                  <th>Week</th>
+                  <th>Opponent</th>
+                  <th>Attempts</th>
+                  <th>Cpmpletions</th>
+                  <th>Sack</th>
+                  <th>Interceptions</th>
+                  <th>Passing yards</th>
+                  <th>Passing TDs</th>
+                  <th>Rush Attempts</th>
+                  <th>Rush Yards</th>
+                  <th>Rush TDs</th>
+              </tr>
+              </table>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+
+
+  
+      </div>
+    </div>
+    <script>
+      $(document).ready(function () {
+        function getBakerData () {
+
+        $.getJSON('./data/bakerMayfieldData.json', function (data) {
+          var game =''
+          $.each(data, function (key, value) {
+            game += '<tr>'
+            game += '<td>' + value.week + '</td>';
+            game += '<td>' + value.opponent + '</td>';
+            game += '<td>' + value.Att + '</td>';
+            game += '<td>' + value.Cmp + '</td>';
+            game += '<td>' + value.Sack + '</td>';
+            game += '<td>' + value.Int + '</td>';
+            game += '<td>' + value.PsYds + '</td>';
+            game += '<td>' + value.PsTD + '</td>';
+            game += '<td>' + value.Rush + '</td>';
+            game += '<td>' + value.RshYds + '</td>';
+            game += '<td>' + value.RshTD + '</td>';
+                      });
+                          
+                        //INSERTING ROWS INTO TABLE 
+                        $('#table').append(game);
+          })
+        }
+        getBakerData()
+
+        
+        function getBlakeData () {
+
+        $.getJSON('./data/blakeBortlesData.json', function (data) {
+          var game =''
+          $.each(data, function (key, value) {
+            game += '<tr>'
+            game += '<td>' + value.week + '</td>';
+            game += '<td>' + value.opponent + '</td>';
+            game += '<td>' + value.Att + '</td>';
+            game += '<td>' + value.Cmp + '</td>';
+            game += '<td>' + value.Sack + '</td>';
+            game += '<td>' + value.Int + '</td>';
+            game += '<td>' + value.PsYds + '</td>';
+            game += '<td>' + value.PsTD + '</td>';
+            game += '<td>' + value.Rush + '</td>';
+            game += '<td>' + value.RshYds + '</td>';
+            game += '<td>' + value.RshTD + '</td>';
+                      });
+                          
+                        //INSERTING ROWS INTO TABLE 
+                        $('#tabletwo').append(game);
+          })
+        }
+        getBlakeData()
+
+        function getDerekData () {
+
+        $.getJSON('./data/derekCarrData.json', function (data) {
+          var game =''
+          $.each(data, function (key, value) {
+            game += '<tr>'
+            game += '<td>' + value.week + '</td>';
+            game += '<td>' + value.opponent + '</td>';
+            game += '<td>' + value.Att + '</td>';
+            game += '<td>' + value.Cmp + '</td>';
+            game += '<td>' + value.Sack + '</td>';
+            game += '<td>' + value.Int + '</td>';
+            game += '<td>' + value.PsYds + '</td>';
+            game += '<td>' + value.PsTD + '</td>';
+            game += '<td>' + value.Rush + '</td>';
+            game += '<td>' + value.RshYds + '</td>';
+            game += '<td>' + value.RshTD + '</td>';
+                      });
+                          
+                        //INSERTING ROWS INTO TABLE 
+                        $('#tablethree').append(game);
+            })
+          }
+          getDerekData()
+
+
+
+    })
+      
+
+    </script>
+  </body>
+</html>
