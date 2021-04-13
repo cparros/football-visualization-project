@@ -1,0 +1,103 @@
+.btn {
+  margin:0 auto;
+  display:block;
+}
+
+.carr {
+  margin-left: 5%;
+}
+
+h1 {
+  text-align: center;
+}
+
+h3 {
+  color: whitesmoke;
+  text-align: center;
+  margin: 1% 0;
+}
+
+h4 {
+  color: whitesmoke;
+  text-align: center;
+}
+
+h5 {
+  color: whitesmoke;
+  text-align: center;
+}
+
+p {
+  text-align: center;
+}
+
+table {
+  margin: 5% auto;
+  font-size: small;
+  border: 1px solid black;
+  border-radius: 2%;
+}
+
+td {
+  background-color: #e2f5d4;
+  border: 1px solid black;
+}
+
+th,
+td {
+  font-weight: bold;
+  border: 1px solid black;
+  padding: 5px;
+  text-align: center;
+}
+
+td {
+  font-weight: lighter;
+}
+
+.border {
+  border-radius: 10px;
+}
+
+.btn-inst {
+ color: whitesmoke;
+}
+
+.container {
+  margin: 2.5% auto;
+}
+
+.qb-container {
+  box-shadow: 5px 10px #888888;
+  opacity: .9;
+  ;
+  
+}
+
+.feature-img {
+  border-radius: 50%;
+  border: white solid;
+  margin: 5% auto;
+  display: block;
+}
+
+.feature-logo {
+  margin-right: 6%;
+  margin-bottom: 2%;
+}
+
+.player-story {
+  color: whitesmoke;
+  margin: 2% 0;
+}
+
+.qb-story {
+  border-left: whitesmoke solid 2px;
+  margin: 2% 0;
+}
+
+#canvas {
+  width: 100%;
+  font-size: 8px;
+}
+
