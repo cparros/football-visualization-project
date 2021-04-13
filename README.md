@@ -32,4 +32,11 @@ SO THAT I can spend less time parsing data and more time actually strategizing.
 
 AS a sports fan I desire to look at data about many different starting quarterbacks.
 I WANT an application I can use to quickly look over visualized statistics in order to pick the QB for my lineup/fantasy team.
-```
+
+## Future Developement
+
+- Move JS to files
+- Mobile functionality
+- User Selection/Imput to allow for dynamically created graphs
+- More QBs
+- More Interactive Charts
