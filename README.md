@@ -5,27 +5,27 @@ An interactive web application with which users can track NFL Qb data and perfor
 
 ## Questions that need answers...
 
-What is the problem I wannt to solve?
-```
+### What is the problem I wannt to solve?
+
 Sports Statistics Tables can be a pain to look over...so lets get rid of them with visualized data!
-```
-What decisions need to be made?
-```
-What JS libraries we can use to visualize data?
+
+### What decisions need to be made?
+
+### What JS libraries we can use to visualize data?
 - Chart.js apex.js, morris, c3, D3!!
 - Tableau for now to get idea of desired look. Tableau is good for prototypes but little customization. (Abstraction  Barrier)
-```
-What is the desired outcome?
-```
+
+### What is the desired outcome?
+
 Create a tool/application that the user can access that will cut down on time spent combing statistics, and allow for more time to talk strategy and make decisions.
-```
-What tasks should the user perform?
-```
+
+### What tasks should the user perform?
+
 Search, Select athlete, select data they desire to see/access
-```
+
 ## User Story
 
-```
+
 AS a coach I desire to scout my next opponent's starting quarterback.
 I WANT a tool that makes data easy to view and interact with UNLIKE a stat table
 SO THAT I can spend less time parsing data and more time actually strategizing. 
