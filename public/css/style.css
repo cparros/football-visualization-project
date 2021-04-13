@@ -1,9 +1,6 @@
-
-
-
 .btn {
-  margin:0 auto;
-  display:block;
+  margin: 0 auto;
+  display: block;
 }
 
 .chart-description {
@@ -15,9 +12,8 @@
   margin-top: 4em;
   border-radius: 2%;
   box-shadow: 5px 10px #bbb7b7;
-  opacity: .9;
+  opacity: 0.9;
 }
-
 
 .chart-img {
   height: 44%;
@@ -84,7 +80,7 @@ td {
 }
 
 .btn-inst {
- color: whitesmoke;
+  color: whitesmoke;
 }
 
 .container {
@@ -94,8 +90,7 @@ td {
 
 .qb-container {
   box-shadow: 5px 10px #888888;
-  opacity: .9;
-  
+  opacity: 0.9;
 }
 
 .feature-img {
@@ -129,16 +124,16 @@ td {
   font-size: 8px;
 }
 
-#baker-chart-img{
+#baker-chart-img {
   height: 780px;
-  width: 870px
+  width: 870px;
 }
 #second-img-div {
   height: 780px;
 }
 
 #baker-img-three {
-  height: 50em
+  height: 50em;
 }
 
 #baker-two {
@@ -167,9 +162,8 @@ td {
   height: 41.5em;
 }
 #blake-chart-desc {
-  margin-top:  10em;
+  margin-top: 10em;
 }
-
 
 #derek-second-img-div {
   height: 43.5em;
@@ -185,7 +179,7 @@ td {
 }
 
 #derek-three {
-  height:36.5%;
+  height: 36.5%;
 }
 
 #derek-third-div {

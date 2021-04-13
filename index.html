@@ -11,9 +11,7 @@
       crossorigin="anonymous"
     />
     <link href="./public/css/style.css" type=text/css rel="stylesheet" />
-    <script src=
-"https://code.jquery.com/jquery-3.5.1.js">
-    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <title>Show Me the STATS</title>
   </head>
   <body>
@@ -51,14 +49,14 @@
       </nav>
     </header>
     <div>
-    <img id="nfl-logo" src="./public/assets/images/nfl.svg">
+      <img id="nfl-logo" src="./public/assets/images/nfl.svg" />
     </div>
     <div>
       <h1>WELCOME to "SHOW me the Stats"</h1>
       <h5 id="intro">A Sports Data Visualization Platform</h5>
     </div>
     <!-- QB Holder -->
-    
+
     <div class="container bg-light">
       <div class="row">
         <div class="col-md-12">
@@ -66,14 +64,18 @@
             Our Goal here at <strong>SHOW me the Stats (QB Edition)</strong> is
             to present your favorite Quarterback's seasonal data in a way that
             makes sense! Think about how many times have you gone to a player's
-            stats page and seen data listed in tables, like the ones below. Now think about how long
-            it takes you to find the stats your looking for and break it down or make calculations. It can take some time.
-            This is where we come in. Whether it be percentages, or yards and TDs per game, or per opponent we
-            desire to <strong>VISUALIZE</strong> this data and let your
-            <strong>EYES</strong> do the thinking allowing you to spend more time strategizing. 
-           
-          </p> 
-          <p>In these examples we have provided tables of each QB's Data for reference.</p>
+            stats page and seen data listed in tables, like the ones below. Now
+            think about how long it takes you to find the stats your looking for
+            and break it down or make calculations. It can take some time. This
+            is where we come in. Whether it be percentages, or yards and TDs per
+            game, or per opponent we desire to <strong>VISUALIZE</strong> this
+            data and let your <strong>EYES</strong> do the thinking allowing you
+            to spend more time strategizing.
+          </p>
+          <p>
+            In these examples we have provided tables of each QB's Data for
+            reference.
+          </p>
         </div>
       </div>
     </div>
@@ -83,8 +85,8 @@
           <h3>Here are some featured QBs!</h3>
           <p class="btn-inst">
             <em
-              >Clicking the stats button will take you to some prototype statistics
-              visualizations where we talk about QB trends.</em
+              >Clicking the stats button will take you to some prototype
+              statistics visualizations where we talk about QB trends.</em
             >
           </p>
           <!-- Baker -->
@@ -115,10 +117,14 @@
                 </p>
               </div>
               <div class="qb-story col-md-8">
-                
-                <a id="bakerBtn" type="button" class="btn btn-danger" href="./baker.html">Click here to See 2018 Stats Visualized</a>
+                <a
+                  id="bakerBtn"
+                  type="button"
+                  class="btn btn-danger"
+                  href="./baker.html"
+                  >Click here to See 2018 Stats Visualized</a
+                >
                 <table class="bg-light" id="table">
-
                   <tr>
                     <th>Week</th>
                     <th>Opponent</th>
@@ -131,9 +137,8 @@
                     <th>Rush Attempts</th>
                     <th>Rush Yards</th>
                     <th>Rush TDs</th>
-                </tr>
-        
-              </table>
+                  </tr>
+                </table>
               </div>
             </div>
           </div>
@@ -168,7 +173,6 @@
                   Click here to See 2018 Stats Visualized
                 </a>
                 <table class="bg-light" id="tabletwo">
-
                   <tr>
                     <th>Week</th>
                     <th>Opponent</th>
@@ -181,9 +185,8 @@
                     <th>Rush Attempts</th>
                     <th>Rush Yards</th>
                     <th>Rush TDs</th>
-                </tr>
-        
-              </table>
+                  </tr>
+                </table>
               </div>
             </div>
           </div>
@@ -213,116 +216,104 @@
                 </p>
               </div>
               <div class="qb-story col-md-8">
-                <a type="button" href="./derek.html" class="btn btn-light">Click here to See 2018 Stats Visualized</a>
+                <a type="button" href="./derek.html" class="btn btn-light"
+                  >Click here to See 2018 Stats Visualized</a
+                >
                 <table class="bg-light" id="tablethree">
-
-                <tr>
-                  <th>Week</th>
-                  <th>Opponent</th>
-                  <th>Attempts</th>
-                  <th>Cpmpletions</th>
-                  <th>Sack</th>
-                  <th>Interceptions</th>
-                  <th>Passing yards</th>
-                  <th>Passing TDs</th>
-                  <th>Rush Attempts</th>
-                  <th>Rush Yards</th>
-                  <th>Rush TDs</th>
-              </tr>
-              </table>
+                  <tr>
+                    <th>Week</th>
+                    <th>Opponent</th>
+                    <th>Attempts</th>
+                    <th>Cpmpletions</th>
+                    <th>Sack</th>
+                    <th>Interceptions</th>
+                    <th>Passing yards</th>
+                    <th>Passing TDs</th>
+                    <th>Rush Attempts</th>
+                    <th>Rush Yards</th>
+                    <th>Rush TDs</th>
+                  </tr>
+                </table>
               </div>
-              
             </div>
           </div>
         </div>
-
-
-  
       </div>
     </div>
     <script>
       $(document).ready(function () {
-        function getBakerData () {
+        function getBakerData() {
+          $.getJSON("./data/bakerMayfieldData.json", function (data) {
+            var game = "";
+            $.each(data, function (key, value) {
+              game += "<tr>";
+              game += "<td>" + value.week + "</td>";
+              game += "<td>" + value.opponent + "</td>";
+              game += "<td>" + value.Att + "</td>";
+              game += "<td>" + value.Cmp + "</td>";
+              game += "<td>" + value.Sack + "</td>";
+              game += "<td>" + value.Int + "</td>";
+              game += "<td>" + value.PsYds + "</td>";
+              game += "<td>" + value.PsTD + "</td>";
+              game += "<td>" + value.Rush + "</td>";
+              game += "<td>" + value.RshYds + "</td>";
+              game += "<td>" + value.RshTD + "</td>";
+            });
 
-        $.getJSON('./data/bakerMayfieldData.json', function (data) {
-          var game =''
-          $.each(data, function (key, value) {
-            game += '<tr>'
-            game += '<td>' + value.week + '</td>';
-            game += '<td>' + value.opponent + '</td>';
-            game += '<td>' + value.Att + '</td>';
-            game += '<td>' + value.Cmp + '</td>';
-            game += '<td>' + value.Sack + '</td>';
-            game += '<td>' + value.Int + '</td>';
-            game += '<td>' + value.PsYds + '</td>';
-            game += '<td>' + value.PsTD + '</td>';
-            game += '<td>' + value.Rush + '</td>';
-            game += '<td>' + value.RshYds + '</td>';
-            game += '<td>' + value.RshTD + '</td>';
-                      });
-                          
-                        //INSERTING ROWS INTO TABLE 
-                        $('#table').append(game);
-          })
+            //INSERTING ROWS INTO TABLE
+            $("#table").append(game);
+          });
         }
-        getBakerData()
+        getBakerData();
 
-        
-        function getBlakeData () {
+        function getBlakeData() {
+          $.getJSON("./data/blakeBortlesData.json", function (data) {
+            var game = "";
+            $.each(data, function (key, value) {
+              game += "<tr>";
+              game += "<td>" + value.week + "</td>";
+              game += "<td>" + value.opponent + "</td>";
+              game += "<td>" + value.Att + "</td>";
+              game += "<td>" + value.Cmp + "</td>";
+              game += "<td>" + value.Sack + "</td>";
+              game += "<td>" + value.Int + "</td>";
+              game += "<td>" + value.PsYds + "</td>";
+              game += "<td>" + value.PsTD + "</td>";
+              game += "<td>" + value.Rush + "</td>";
+              game += "<td>" + value.RshYds + "</td>";
+              game += "<td>" + value.RshTD + "</td>";
+            });
 
-        $.getJSON('./data/blakeBortlesData.json', function (data) {
-          var game =''
-          $.each(data, function (key, value) {
-            game += '<tr>'
-            game += '<td>' + value.week + '</td>';
-            game += '<td>' + value.opponent + '</td>';
-            game += '<td>' + value.Att + '</td>';
-            game += '<td>' + value.Cmp + '</td>';
-            game += '<td>' + value.Sack + '</td>';
-            game += '<td>' + value.Int + '</td>';
-            game += '<td>' + value.PsYds + '</td>';
-            game += '<td>' + value.PsTD + '</td>';
-            game += '<td>' + value.Rush + '</td>';
-            game += '<td>' + value.RshYds + '</td>';
-            game += '<td>' + value.RshTD + '</td>';
-                      });
-                          
-                        //INSERTING ROWS INTO TABLE 
-                        $('#tabletwo').append(game);
-          })
+            //INSERTING ROWS INTO TABLE
+            $("#tabletwo").append(game);
+          });
         }
-        getBlakeData()
+        getBlakeData();
 
-        function getDerekData () {
+        function getDerekData() {
+          $.getJSON("./data/derekCarrData.json", function (data) {
+            var game = "";
+            $.each(data, function (key, value) {
+              game += "<tr>";
+              game += "<td>" + value.week + "</td>";
+              game += "<td>" + value.opponent + "</td>";
+              game += "<td>" + value.Att + "</td>";
+              game += "<td>" + value.Cmp + "</td>";
+              game += "<td>" + value.Sack + "</td>";
+              game += "<td>" + value.Int + "</td>";
+              game += "<td>" + value.PsYds + "</td>";
+              game += "<td>" + value.PsTD + "</td>";
+              game += "<td>" + value.Rush + "</td>";
+              game += "<td>" + value.RshYds + "</td>";
+              game += "<td>" + value.RshTD + "</td>";
+            });
 
-        $.getJSON('./data/derekCarrData.json', function (data) {
-          var game =''
-          $.each(data, function (key, value) {
-            game += '<tr>'
-            game += '<td>' + value.week + '</td>';
-            game += '<td>' + value.opponent + '</td>';
-            game += '<td>' + value.Att + '</td>';
-            game += '<td>' + value.Cmp + '</td>';
-            game += '<td>' + value.Sack + '</td>';
-            game += '<td>' + value.Int + '</td>';
-            game += '<td>' + value.PsYds + '</td>';
-            game += '<td>' + value.PsTD + '</td>';
-            game += '<td>' + value.Rush + '</td>';
-            game += '<td>' + value.RshYds + '</td>';
-            game += '<td>' + value.RshTD + '</td>';
-                      });
-                          
-                        //INSERTING ROWS INTO TABLE 
-                        $('#tablethree').append(game);
-            })
-          }
-          getDerekData()
-
-
-
-    })
-      
-
+            //INSERTING ROWS INTO TABLE
+            $("#tablethree").append(game);
+          });
+        }
+        getDerekData();
+      });
     </script>
   </body>
 </html>

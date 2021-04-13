@@ -36,7 +36,10 @@ I WANT an application I can use to quickly look over visualized statistics in or
 ## Future Developement
 
 - Move JS to files
+- create ALL charts with charts.js or D3 to allow customization (Abstraction Barrier)
 - Mobile functionality
 - User Selection/Imput to allow for dynamically created graphs
 - More QBs
 - More Interactive Charts
+- Connection to a database
+- Allow users to create a profile where they can save QB's they have researched and charts they have made
