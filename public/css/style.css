@@ -1,6 +1,21 @@
+
+
+
 .btn {
   margin:0 auto;
   display:block;
+}
+
+.chart-description {
+  color: white
+  ;
+}
+
+
+
+.chart-img {
+  height: 44%;
+  border-radius: 2%;
 }
 
 .carr {
@@ -65,6 +80,7 @@ td {
 
 .container {
   margin: 2.5% auto;
+  border-radius: 1%;
 }
 
 .qb-container {
@@ -96,8 +112,22 @@ td {
   margin: 2% 0;
 }
 
+#baker-chart-img{
+  height: 780px;
+  width: 870px
+}
+
+#bortles-chart-img{
+  height: 780px;
+  width: 945px
+}
+
 #canvas {
   width: 100%;
   font-size: 8px;
+}
+
+#second-img-div {
+  height: 780px;
 }
 

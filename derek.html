@@ -5,13 +5,17 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+  <link href="./public/css/style.css" type=text/css rel="stylesheet" />
+    <script src=
+"https://code.jquery.com/jquery-3.5.1.js">
+    </script>
   <title>Show Me the STATS</title>
 </head>
 <body>
   <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
-        <a class="navbar-brand" href="./index.html">Quarterback</a>
+        <a class="navbar-brand" href="index.html">Quarterback</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -21,24 +25,143 @@
               <a class="nav-link" aria-current="page" href="baker.html">Baker Mayfield</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="blake.html">Blake Bortles</a>
+              <a class="nav-link active" href="blake.html">Blake Bortles</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="derek.html">Derek Carr</a>
+              <a class="nav-link" href="derek.html">Derek Carr</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
   </header>
-  <div class="container">
+  <!-- First -->
+  <div class="container bg-dark">
     <div class="row">
-      <div class="col-md-12">
-        
-        
+      <div class="col-md-8">
+        <canvas id="baker-chart">
+        </canvas>
+
+      </div>
+      <div class="col-md-4 ">
+        <p class="chart-description"> Here we are looking to see the relationship each week betweeen TDs Sacks and Ints. You can almost see a direct correlation between TDs and Sacks. We can guess Baker probably wasn't being pressured much those games.</p>
+         
       </div>
     </div>
   </div>
+<!-- first end -->
+<!-- second -->
+    <div class="container bg-dark" id="second-img-div">
+      <div class="row">
+      <div class="col-md-8">
+        <img class="chart-img" src="./public/assets/images/bortles-comp-time.png">
+      </div>
+      <div class="col-md-4">
+        <p class="chart-description">Here in this chart we can see Baker's Completion Percentage  each week through the whole season. 
+        In this chart the bottom green line represents 50% and the top is his best percentage performance.
+        The red line represents his average completion percentage and the red field is what we can predict his completion percentage to be for the next game with about 95% certainty. This is called a Confidence Interval.</p>
+      </div>
+    </div>
+  </div>
+<!-- second end -->
+<!-- third -->
+      <div class="container bg-dark" >
+        <div class="row">
+          <div class="col-md-8">
+            <img id="bortles-chart-img" src="./public/assets/images/bortles-pass-td-v-att.png">
+            <p>
 
+            </p>
+          </div>
+        </div>
+      </div>
+<!-- third end -->
+
+    </div>
+    
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.1.0/dist/chart.min.js"></script>
+  <script>
+    $(document).ready(function () {
+
+   var xmlHttp = new XMLHttpRequest()
+   var url = 'http://127.0.0.1:5500/data/derekCarrData.json'
+   xmlHttp.open('GET', url, true)
+   xmlHttp.send()
+   xmlHttp.onreadystatechange = function() {
+     if(this.readyState == 4 && this.status == 200) {
+       var data = JSON.parse(this.responseText)
+      //  console.log(data)
+
+
+       var week = data.map(function(game) {
+         return game.week
+       })
+
+       var yards = data.map(function(game) {
+         return game.PsYds
+       })
+
+      var tds = data.map(function(game) {
+        return game.PsTD
+      })       
+
+      var int = data.map(function(game) {
+        return game.Int
+      })
+ 
+      var sacks = data.map(function(game) {
+          return game.Sack
+      })
+        
+      var opponent = data.map(function(game) {
+         return game.opponent
+      })
+
+    var ctx = $('#baker-chart');
+        
+    window.myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: week,
+        datasets: [{
+            label: 'Derek Carr TDs Per Game/Week',
+            data: tds,
+            backgroundColor: ['red'],
+            borderColor: ['red'],
+            borderWidth: 3,
+            tension: .2
+        },
+        {
+            label: 'Derek Carr Ints Per Game/Week',
+            data: int,
+            backgroundColor: ['green'],
+            borderColor: ['green'],
+            borderWidth: 3,
+            tension: .2
+        },
+        {
+            label: 'Derek Carr Sacks Per Game/Week',
+            data: sacks,
+            backgroundColor: ['orange'],
+            borderColor: ['orange'],
+            borderWidth: 3,
+            tension: .2
+        }
+      ],
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+}});
+     
+    
+     }
+   }
+})
+  </script>
 </body>
 </html>

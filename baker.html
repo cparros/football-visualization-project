@@ -35,30 +35,54 @@
       </div>
     </nav>
   </header>
-  <div class="container">
+  <!-- First -->
+  <div class="container bg-dark">
     <div class="row">
-      <div class="col-md-12">
+      <div class="col-md-8">
         <canvas id="baker-chart">
-
         </canvas>
-        
+
+      </div>
+      <div class="col-md-4 ">
+        <p class="chart-description"> Here we are looking to see the relationship each week betweeen TDs Sacks and Ints. You can almost see a direct correlation between TDs and Sacks. We can guess Baker probably wasn't being pressured much those games.</p>
+         
       </div>
     </div>
+  </div>
+<!-- first end -->
+<!-- second -->
+    <div class="container bg-dark" id="second-img-div">
+      <div class="row">
+      <div class="col-md-8">
+        <img class="chart-img" src="./public/assets/images/mayfield-comp-time.png">
+      </div>
+      <div class="col-md-4">
+        <p class="chart-description">Here in this chart we can see Baker's Completion Percentage  each week through the whole season. 
+        In this chart the bottom green line represents 50% and the top is his best percentage performance.
+        The red line represents his average completion percentage and the red field is what we can predict his completion percentage to be for the next game with about 95% certainty. This is called a Confidence Interval.</p>
+      </div>
+    </div>
+  </div>
+<!-- second end -->
+<!-- third -->
+      <div class="container bg-dark" >
+        <div class="row">
+          <div class="col-md-8">
+            <img id="baker-chart-img" src="./public/assets/images/bortles-pass-td-v-att.png">
+            <p>
+
+            </p>
+          </div>
+        </div>
+      </div>
+<!-- third end -->
+
+    </div>
+    
   </div>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@3.1.0/dist/chart.min.js"></script>
   <script>
     $(document).ready(function () {
-
-    // function getBakerData () {
-    // $.getJSON('./data/bakerMayfieldData.json', function (data) {
-    //   $.each(data, function(key, value){
-    //     let week = value.week
-    //     let yards = value.PsYds
-      
-    //     })
-    //   })
-    // }
-    // getBakerData()
 
    var xmlHttp = new XMLHttpRequest()
    var url = 'http://127.0.0.1:5500/data/bakerMayfieldData.json'
@@ -68,6 +92,8 @@
      if(this.readyState == 4 && this.status == 200) {
        var data = JSON.parse(this.responseText)
       //  console.log(data)
+
+
        var week = data.map(function(game) {
          return game.week
        })
@@ -76,6 +102,14 @@
          return game.PsYds
        })
 
+      var tds = data.map(function(game) {
+        return game.PsTD
+      })       
+
+      var int = data.map(function(game) {
+        return game.Int
+      })
+ 
       var sacks = data.map(function(game) {
           return game.Sack
       })
@@ -89,21 +123,32 @@
     window.myChart = new Chart(ctx, {
     type: 'line',
     data: {
-        labels: sacks,
+        labels: week,
         datasets: [{
-            label: 'Baker Mayfield Yards Per Game/Week',
-            data: yards,
-            backgroundColor: ['transparent'],
+            label: 'Baker Mayfield TDs Per Game/Week',
+            data: tds,
+            backgroundColor: ['red'],
             borderColor: ['red'],
-            borderWidth: 1
+            borderWidth: 3,
+            tension: .2
+        },
+        {
+            label: 'Baker Mayfield Ints Per Game/Week',
+            data: int,
+            backgroundColor: ['green'],
+            borderColor: ['green'],
+            borderWidth: 3,
+            tension: .2
         },
         {
             label: 'Baker Mayfield Sacks Per Game/Week',
-            data: week,
-            backgroundColor: ['transparent'],
-            borderColor: ['green'],
-            borderWidth: 1
-        }],
+            data: sacks,
+            backgroundColor: ['orange'],
+            borderColor: ['orange'],
+            borderWidth: 3,
+            tension: .2
+        }
+      ],
     options: {
         scales: {
             y: {
