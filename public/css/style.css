@@ -7,14 +7,24 @@
 }
 
 .chart-description {
-  color: white
-  ;
+  color: white;
+  margin: auto;
+  width: 50%;
+  border: 3px solid gray;
+  padding: 10px;
+  margin-top: 4em;
+  border-radius: 2%;
+  box-shadow: 5px 10px #bbb7b7;
+  opacity: .9;
 }
 
 
 .chart-img {
   height: 44%;
   border-radius: 2%;
+  border: solid gray;
+  margin-top: 1%;
+  display: block;
 }
 
 .carr {
@@ -85,7 +95,6 @@ td {
 .qb-container {
   box-shadow: 5px 10px #888888;
   opacity: .9;
-  ;
   
 }
 
@@ -111,9 +120,8 @@ td {
   margin: 2% 0;
 }
 
-#baker-chart-img{
-  height: 780px;
-  width: 870px
+#intro {
+  color: black;
 }
 
 #canvas {
@@ -121,8 +129,24 @@ td {
   font-size: 8px;
 }
 
+#baker-chart-img{
+  height: 780px;
+  width: 870px
+}
 #second-img-div {
   height: 780px;
+}
+
+#baker-img-three {
+  height: 50em
+}
+
+#baker-two {
+  margin-top: 7em;
+}
+
+#baker-last {
+  margin-top: 8em;
 }
 
 #bortles-two {
@@ -135,8 +159,24 @@ td {
   border-radius: 2%;
 }
 
+#blake-second-img-div {
+  height: 45.5em;
+}
+
 #blake-third-div {
-  height: 45em;
+  height: 41.5em;
+}
+#blake-chart-desc {
+  margin-top:  10em;
+}
+
+
+#derek-second-img-div {
+  height: 43.5em;
+}
+
+#derek-second-chart-desc {
+  margin-top: 2em;
 }
 
 #derek-two {
@@ -149,7 +189,11 @@ td {
 }
 
 #derek-third-div {
-  height: 45em;
+  height: 41.5em;
+}
+
+#derek-third-desc {
+  margin-top: 5.5em;
 }
 
 #nfl-logo {
