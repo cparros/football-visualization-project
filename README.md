@@ -46,6 +46,7 @@ I WANT an application I can use to quickly look over visualized statistics in or
 - create ALL charts with charts.js or D3 to allow customization (Abstraction Barrier)
 - Mobile functionality
 - User Selection/Imput to allow for dynamically created graphs
+- Setup server.js / routes for Heroku deploy
 - More QBs
 - More Interactive Charts
 - Connection to a database
