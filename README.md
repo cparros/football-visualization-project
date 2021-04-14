@@ -5,8 +5,8 @@ An interactive web application with which users can track NFL Qb data and perfor
 
 [Live Application](https://cparros.github.io/football-visualization-project/)
 
-[Home Screen](./public/assets/images/homescreen.png)
-[Example Page] (./public/assets/images/examplepage.png)
+![screenshot](./public/assets/images/homescreen.png)
+![screenshot] (./public/assets/images/examplepage.png)
 
 ## Questions that need answers...
 
