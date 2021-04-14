@@ -15,9 +15,10 @@ An interactive web application with which users can track NFL Qb data and perfor
 Sports Statistics Tables can be a pain to look over...so lets get rid of them with visualized data!
 
 ### What decisions need to be made?
+- Decide What JS libraries we can use to visualize data in full application.
 
-### What JS libraries we can use to visualize data?
-- Chart.js apex.js, morris, c3, D3!!
+Options:
+- Chart.js (used for prototype) apex.js, morris, c3, D3!!
 - Tableau for now to get idea of desired look. Tableau is good for prototypes but little customization. (Abstraction  Barrier)
 
 ### What is the desired outcome?
