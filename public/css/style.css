@@ -147,6 +147,17 @@ td {
   display: block;
 }
 
+#page {
+ margin: 0 auto;
+}
+
+.feature-img-page{
+  border-radius: 50%;
+  border: white solid;
+  margin: 0 auto;
+  display: block;
+}
+
 .feature-logo {
   margin-right: 6%;
   margin-bottom: 2%;
