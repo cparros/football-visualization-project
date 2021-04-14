@@ -39,9 +39,10 @@ SO THAT I can spend less time parsing data and more time actually strategizing.
 AS a sports fan I desire to look at data about many different starting quarterbacks.
 I WANT an application I can use to quickly look over visualized statistics in order to pick the QB for my lineup/fantasy team.
 
-## Future Developement
+## Future Developement/Cleanup
 
-- Move JS to files
+- Move JS to files modules
+- Cleaner CSS
 - create ALL charts with charts.js or D3 to allow customization (Abstraction Barrier)
 - Mobile functionality
 - User Selection/Imput to allow for dynamically created graphs
