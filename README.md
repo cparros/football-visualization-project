@@ -48,3 +48,6 @@ I WANT an application I can use to quickly look over visualized statistics in or
 - More Interactive Charts
 - Connection to a database
 - Allow users to create a profile where they can save QB's they have researched and charts they have made
+
+## Questions
+Email: Celparros@gmail.com
