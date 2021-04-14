@@ -27,7 +27,7 @@ Sports Statistics Tables can be a pain to look over...so lets get rid of them wi
 - Decide What JS libraries we can use to visualize data in future full application.
 
 Options:
-- Chart.js (used for prototype) apex.js, morris, c3, D3!!
+- React? Chart.js (used for prototype) apex.js, morris, c3, D3!!
 - Tableau for now to get idea of desired look / more advanced table. Tableau is good for prototypes but little customization. (Abstraction  Barrier)
 
 ### What is the desired outcome?
