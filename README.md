@@ -42,6 +42,7 @@ Search, Select athlete, select data they desire to see/access
 
 - Move JS to files modules
 - Cleaner CSS
+- Use React/Handlebars to display data
 - create ALL charts with charts.js or D3 to allow customization and remove Abstraction Barrier
 - Mobile functionality
 - User Selection/Imput to allow for dynamically created graphs
