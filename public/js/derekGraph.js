@@ -36,6 +36,10 @@ $(document).ready(function () {
         return game.PsTD;
       });
 
+      var opponent = data.map(function (game) {
+        return game.opponent;
+      });
+
       var ctx = $("#baker-chart");
 
       window.myChart = new Chart(ctx, {
@@ -101,6 +105,45 @@ $(document).ready(function () {
           },
         },
       });
+
+
+      var ctxTwo = $("#derek-chart-two");
+      window.myChart = new Chart(ctxTwo, {
+        type: "radar",
+        data: {
+          labels: opponent,
+          datasets: [
+            {
+              label: "Derek Carr Interceptions Per Game/Week",
+              data: ints,
+              backgroundColor: ["silver"],
+              borderColor: ["silver"],
+              borderWidth: 3,
+              tension: 0.2,
+            },
+            {
+              label: "Derek Carr Passing TDs Per Game/Week",
+              data: tds,
+              backgroundColor: ["black"],
+              borderColor: ["black"],
+              borderWidth: 3,
+              tension: 0.2,
+            },
+          ],
+          options: {
+            scales: {
+              y: {
+                beginAtZero: true,
+              },
+            },
+          },
+        },
+      });
+
+
+
+
+
     }
   };
 });

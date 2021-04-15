@@ -36,6 +36,11 @@ $(document).ready(function () {
         return game.PsTD;
       });
 
+      var opponent = data.map(function (game) {
+        return game.opponent;
+      });
+      
+
       var ctx = $("#baker-chart");
 
       window.myChart = new Chart(ctx, {
@@ -44,7 +49,7 @@ $(document).ready(function () {
           labels: week,
           datasets: [
             {
-              label: "Baker Mayfield Yards Per Game/Week",
+              label: "Blake Bortles Yards Per Game/Week",
               data: yards,
               backgroundColor: ["red"],
               borderColor: ["red"],
@@ -52,7 +57,7 @@ $(document).ready(function () {
               tension: 0.2,
             },
             {
-              label: "Baker Mayfield Completions Per Game/Week",
+              label: "Blake Bortles Completions Per Game/Week",
               data: comp,
               backgroundColor: ["green"],
               borderColor: ["green"],
@@ -60,7 +65,7 @@ $(document).ready(function () {
               tension: 0.2,
             },
             {
-              label: "Baker Mayfield Pass Attempts Per Game/Week",
+              label: "Blake Bortles Pass Attempts Per Game/Week",
               data: att,
               backgroundColor: ["orange"],
               borderColor: ["orange"],
@@ -68,7 +73,7 @@ $(document).ready(function () {
               tension: 0.2,
             },
             {
-              label: "Derek Carr Sacks Per Game/Week",
+              label: "Blake Bortles Sacks Per Game/Week",
               data: sacks,
               backgroundColor: ["aqua"],
               borderColor: ["aqua"],
@@ -76,7 +81,7 @@ $(document).ready(function () {
               tension: 0.2,
             },
             {
-              label: "Derek Carr Interceptions Per Game/Week",
+              label: "Blake Bortles Interceptions Per Game/Week",
               data: ints,
               backgroundColor: ["pink"],
               borderColor: ["pink"],
@@ -84,7 +89,7 @@ $(document).ready(function () {
               tension: 0.2,
             },
             {
-              label: "Derek Carr Passing TDs Per Game/Week",
+              label: "Blake Bortles Passing TDs Per Game/Week",
               data: tds,
               backgroundColor: ["yellow"],
               borderColor: ["yellow"],
@@ -101,6 +106,43 @@ $(document).ready(function () {
           },
         },
       });
+
+
+      var ctxTwo = $("#blake-chart-two");
+      window.myChart = new Chart(ctxTwo, {
+        type: "radar",
+        data: {
+          labels: opponent,
+          datasets: [
+            {
+              label: "Blake Bortles Interceptions Per Game/Week",
+              data: ints,
+              backgroundColor: ["#D8A328"],
+              borderColor: ["#D8A328"],
+              borderWidth: 3,
+              tension: 0.2,
+            },
+            {
+              label: "Blake Bortles Passing TDs Per Game/Week",
+              data: tds,
+              backgroundColor: ["#136677"],
+              borderColor: ["#136677"],
+              borderWidth: 3,
+              tension: 0.2,
+            },
+          ],
+          options: {
+            scales: {
+              y: {
+                beginAtZero: true,
+              },
+            },
+          },
+        },
+      });
+
+
+
     }
   };
 });

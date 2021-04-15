@@ -148,13 +148,13 @@ td {
 }
 
 #page {
- margin: 0 auto;
+  margin: 0 auto;
 }
 
-.feature-img-page{
+.feature-img-page {
   border-radius: 50%;
   border: white solid;
-  margin: 0 auto;
+  margin: 2% auto;
   display: block;
 }
 
@@ -200,6 +200,18 @@ td {
   height: 50em;
 }
 
+#baker-chart {
+  background-color: rgb(255, 253, 253);
+  margin: 1%;
+  border-radius: 2%;
+}
+
+#baker-chart-two{
+  background-color: rgb(255, 253, 253);
+  margin: 1%;
+  border-radius: 2%;
+}
+
 #baker-two {
   margin-top: 7em;
 }
@@ -235,6 +247,18 @@ td {
 
 #derek-second-img-div {
   height: 43.5em;
+}
+
+#blake-chart-two {
+  background-color: rgb(255, 253, 253);
+  margin: 1%;
+  border-radius: 2%;
+}
+
+#derek-chart-two {
+  background-color: rgb(255, 253, 253);
+  margin: 1%;
+  border-radius: 2%;
 }
 
 #derek-second-chart-desc {
