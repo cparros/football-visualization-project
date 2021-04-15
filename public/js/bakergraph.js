@@ -24,6 +24,21 @@ $(document).ready(function () {
         return game.Att;
       });
 
+      var sacks = data.map(function (game) {
+        return game.Sack;
+      });
+
+      var ints = data.map(function (game) {
+        return game.Int;
+      });
+
+      var tds = data.map(function (game) {
+        return game.PsTD;
+      });
+      
+
+
+
 
       var ctx = $("#baker-chart");
 
@@ -53,6 +68,30 @@ $(document).ready(function () {
               data: att,
               backgroundColor: ["orange"],
               borderColor: ["orange"],
+              borderWidth: 3,
+              tension: 0.2,
+            },
+            {
+              label: "Baker Mayfield Sacks Per Game/Week",
+              data: sacks,
+              backgroundColor: ["aqua"],
+              borderColor: ["aqua"],
+              borderWidth: 3,
+              tension: 0.2,
+            },
+            {
+              label: "Baker Mayfield Interceptions Per Game/Week",
+              data: ints,
+              backgroundColor: ["pink"],
+              borderColor: ["pink"],
+              borderWidth: 3,
+              tension: 0.2,
+            },
+            {
+              label: "Baker Mayfield Passing TDs Per Game/Week",
+              data: tds,
+              backgroundColor: ["yellow"],
+              borderColor: ["yellow"],
               borderWidth: 3,
               tension: 0.2,
             },
