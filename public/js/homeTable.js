@@ -1,4 +1,5 @@
 $(document).ready(function () {
+
   function getBakerData() {
     $.getJSON("./data/bakerMayfieldData.json", function (data) {
       var game = "";

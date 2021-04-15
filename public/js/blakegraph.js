@@ -41,7 +41,7 @@ $(document).ready(function () {
       });
       
 
-      var ctx = $("#baker-chart");
+      var ctx = $("#blake-chart");
 
       window.myChart = new Chart(ctx, {
         type: "line",
