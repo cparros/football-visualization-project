@@ -27,8 +27,8 @@ Sports Statistics Tables can be a pain to look over...so lets get rid of them wi
 - Decide What JS libraries we can use to visualize data in future full application.
 
 Options:
-- Create React app? Axios for api calls? Chart.js (used for prototype) apex.js, morris, c3, D3!!
-- Tableau for now to get idea of desired look / more advanced table. Tableau is good for prototypes but little customization. (Abstraction  Barrier)
+- Create React app? Axios for api calls? Chart.js (Tableau used for a few prototype Images) apex.js, morris, c3, D3!!
+- Tableau is good for prototypes but little customization. (Abstraction  Barrier)
 
 ### What is the desired outcome?
 
@@ -41,16 +41,16 @@ Search, Select athlete, select data they desire to see/access
 ## Future Developement/Cleanup
 
 - Move JS to files modules
-- Cleaner CSS
-- Use React/Handlebars to display data
+- Cleaner CSS (react would make this easier)
+- Use React to display data (SPA?)
 - create ALL charts with charts.js or D3 to allow customization and remove Abstraction Barrier
-- Mobile functionality
-- User Selection/Imput to allow for dynamically created graphs
-- Setup server.js / routes for Heroku deploy
-- More QBs
-- More Interactive Charts
-- Connection to a database
-- Allow users to create a profile where they can save QB's they have researched and charts they have made
+- Mobile functionality?
+- User Selection/Imput to allow for dynamically created graphs 
+- Setup server.js / routes for Heroku deploy ?
+- More QB's/Player's data
+- More Interactive Charts?
+- Connection to a database?
+- Allow users to create a profile where they can save QB's or Players they have researched and charts they have made
 
 ## Questions
 Email: Celparros@gmail.com
