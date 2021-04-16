@@ -166,7 +166,14 @@ td {
 
 .intro {
   color: black;
+
 }
+
+#intro-first {
+  color: black;
+}
+
+
 
 #canvas {
   width: 100%;
