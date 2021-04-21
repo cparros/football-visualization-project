@@ -1,6 +1,6 @@
 $(document).ready(function () {
   // function getBakerData() {
-    $.getJSON("../../data/bakerMayfieldData.json", function (data) {
+    $.getJSON("/football-visualization-project/data/bakerMayfieldData.json", function (data) {
       // console.log(data);
       let weeks = [];
       let yards = [];
