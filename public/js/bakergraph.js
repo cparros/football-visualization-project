@@ -1,53 +1,54 @@
 $(document).ready(function () {
-  var xmlHttp = new XMLHttpRequest();
-  var url = "../../data/bakerMayfieldData.json";
-  xmlHttp.open("GET", url, true);
-  xmlHttp.send();
-  xmlHttp.onreadystatechange = function () {
-    if (this.readyState == 4 && this.status == 200) {
-      var data = JSON.parse(this.responseText);
-      //  console.log(data)
+  function getBakerData() {
+    $.getJSON("../../data/bakerMayfieldData.json", function (data) {
+      console.log(data);
+      let weeks = [];
+      let yards = [];
+      let comps = [];
+      let atts = [];
+      let sacks = [];
+      let ints = [];
+      let tds = [];
+      let opps = [];
 
-      var week = data.map(function (game) {
-        return game.week;
+      $.each(data, function (key, value) {
+        let week = value.week;
+        weeks.push(week);
+        console.log(weeks);
+
+        let yard = value.PsYds;
+        yards.push(yard);
+        console.log(yards);
+
+        let comp = value.Cmp;
+        comps.push(comp);
+        console.log(comps);
+
+        let att = value.Att;
+        atts.push(att);
+        console.log(atts);
+
+        let sack = value.Sack;
+        sacks.push(sack);
+        console.log(sacks);
+
+        let int = value.Int;
+        ints.push(int);
+        console.log(ints);
+
+        let td = value.PsTD;
+        tds.push(td);
+        console.log(tds);
+
+        let opp = value.opponent;
+        opps.push(opp);
+        console.log(opps);
       });
-
-      var yards = data.map(function (game) {
-        return game.PsYds;
-      });
-
-      var comp = data.map(function (game) {
-        return game.Cmp;
-      });
-
-      var att = data.map(function (game) {
-        return game.Att;
-      });
-
-      var sacks = data.map(function (game) {
-        return game.Sack;
-      });
-
-      var ints = data.map(function (game) {
-        return game.Int;
-      });
-
-      var tds = data.map(function (game) {
-        return game.PsTD;
-      });
-      
-      var opponent = data.map(function (game) {
-        return game.opponent;
-      });
-
-
-
-
       var ctx = $("#baker-chart");
       window.myChart = new Chart(ctx, {
         type: "line",
         data: {
-          labels: week,
+          labels: weeks,
           datasets: [
             {
               label: "Baker Mayfield Yards Per Game/Week",
@@ -59,7 +60,7 @@ $(document).ready(function () {
             },
             {
               label: "Baker Mayfield Completions Per Game/Week",
-              data: comp,
+              data: comps,
               backgroundColor: ["green"],
               borderColor: ["green"],
               borderWidth: 3,
@@ -67,7 +68,7 @@ $(document).ready(function () {
             },
             {
               label: "Baker Mayfield Pass Attempts Per Game/Week",
-              data: att,
+              data: atts,
               backgroundColor: ["orange"],
               borderColor: ["orange"],
               borderWidth: 3,
@@ -108,14 +109,11 @@ $(document).ready(function () {
         },
       });
 
-      
-
-
       var ctxTwo = $("#baker-chart-two");
       window.myChart = new Chart(ctxTwo, {
         type: "radar",
         data: {
-          labels: opponent,
+          labels: opps,
           datasets: [
             {
               label: "Baker Mayfield Interceptions Per Game/Week",
@@ -143,12 +141,7 @@ $(document).ready(function () {
           },
         },
       });
-
-
-
-
-      
-
-    }
-  };
+    });
+  }
+  getBakerData();
 });
