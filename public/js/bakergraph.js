@@ -1,59 +1,55 @@
 $(document).ready(function () {
-  // function getBakerData() {
-    $.getJSON("https://cparros.github.io/football-visualization-project/data/bakerMayfieldData.json", function (data) {
-      // console.log(data);
-      let weeks = [];
-      let yards = [];
-      let comps = [];
-      let atts = [];
-      let sacks = [];
-      let ints = [];
-      let tds = [];
-      let opps = [];
+  var xmlHttp = new XMLHttpRequest();
+  var url = "https://cparros.github.io/football-visualization-project/data/bakerMayfieldData.json";
+  xmlHttp.open("GET", url, true);
+  xmlHttp.send();
+  xmlHttp.onreadystatechange = function () {
+    if (this.readyState == 4 && this.status == 200) {
+      var data = JSON.parse(this.responseText);
+      //  console.log(data)
 
-      $.each(data, function (key, value) {
-        let week = value.week;
-        weeks.push(week);
-        // console.log(weeks);
+      var week = data.map(function (game) {
+        return game.week;
+      });
 
-        let yard = value.PsYds;
-        yards.push(yard);
-        // console.log(yards);
+      var yards = data.map(function (game) {
+        return game.PsYds;
+      });
 
-        let comp = value.Cmp;
-        comps.push(comp);
-        // console.log(comps);
+      var comp = data.map(function (game) {
+        return game.Cmp;
+      });
 
-        let att = value.Att;
-        atts.push(att);
-        // console.log(atts);
+      var att = data.map(function (game) {
+        return game.Att;
+      });
 
-        let sack = value.Sack;
-        sacks.push(sack);
-        // console.log(sacks);
+      var sacks = data.map(function (game) {
+        return game.Sack;
+      });
 
-        let int = value.Int;
-        ints.push(int);
-        // console.log(ints);
+      var ints = data.map(function (game) {
+        return game.Int;
+      });
 
-        let td = value.PsTD;
-        tds.push(td);
-        // console.log(tds);
+      var tds = data.map(function (game) {
+        return game.PsTD;
+      });
 
-        let opp = value.opponent;
-        opps.push(opp);
-        // console.log(opps);
+      var opponent = data.map(function (game) {
+        return game.opponent;
       });
       
-      var ctx = $("#baker-chart");
+
+      var ctx = $("#blake-chart");
 
       window.myChart = new Chart(ctx, {
         type: "line",
         data: {
-          labels: weeks,
+          labels: week,
           datasets: [
             {
-              label: "Baker Mayfield Yards Per Game/Week",
+              label: "Blake Bortles Yards Per Game/Week",
               data: yards,
               backgroundColor: ["red"],
               borderColor: ["red"],
@@ -61,23 +57,23 @@ $(document).ready(function () {
               tension: 0.2,
             },
             {
-              label: "Baker Mayfield Completions Per Game/Week",
-              data: comps,
+              label: "Blake Bortles Completions Per Game/Week",
+              data: comp,
               backgroundColor: ["green"],
               borderColor: ["green"],
               borderWidth: 3,
               tension: 0.2,
             },
             {
-              label: "Baker Mayfield Pass Attempts Per Game/Week",
-              data: atts,
+              label: "Blake Bortles Pass Attempts Per Game/Week",
+              data: att,
               backgroundColor: ["orange"],
               borderColor: ["orange"],
               borderWidth: 3,
               tension: 0.2,
             },
             {
-              label: "Baker Mayfield Sacks Per Game/Week",
+              label: "Blake Bortles Sacks Per Game/Week",
               data: sacks,
               backgroundColor: ["aqua"],
               borderColor: ["aqua"],
@@ -85,7 +81,7 @@ $(document).ready(function () {
               tension: 0.2,
             },
             {
-              label: "Baker Mayfield Interceptions Per Game/Week",
+              label: "Blake Bortles Interceptions Per Game/Week",
               data: ints,
               backgroundColor: ["pink"],
               borderColor: ["pink"],
@@ -93,7 +89,7 @@ $(document).ready(function () {
               tension: 0.2,
             },
             {
-              label: "Baker Mayfield Passing TDs Per Game/Week",
+              label: "Blake Bortles Passing TDs Per Game/Week",
               data: tds,
               backgroundColor: ["yellow"],
               borderColor: ["yellow"],
@@ -111,25 +107,26 @@ $(document).ready(function () {
         },
       });
 
-      var ctxTwo = $("#baker-chart-two");
+
+      var ctxTwo = $("#blake-chart-two");
       window.myChart = new Chart(ctxTwo, {
         type: "radar",
         data: {
-          labels: opps,
+          labels: opponent,
           datasets: [
             {
-              label: "Baker Mayfield Interceptions Per Game/Week",
+              label: "Blake Bortles Interceptions Per Game/Week",
               data: ints,
-              backgroundColor: ["#ff3c00"],
-              borderColor: ["#ff3c00"],
+              backgroundColor: ["#D8A328"],
+              borderColor: ["#D8A328"],
               borderWidth: 3,
               tension: 0.2,
             },
             {
-              label: "Baker Mayfield Passing TDs Per Game/Week",
+              label: "Blake Bortles Passing TDs Per Game/Week",
               data: tds,
-              backgroundColor: ["#964800"],
-              borderColor: ["#964800"],
+              backgroundColor: ["#136677"],
+              borderColor: ["#136677"],
               borderWidth: 3,
               tension: 0.2,
             },
@@ -143,9 +140,163 @@ $(document).ready(function () {
           },
         },
       });
-    });
-  }
 
 
-  // getBakerData();
-);
+
+    }
+  };
+});
+
+
+
+// $(document).ready(function () {
+//   // function getBakerData() {
+//     $.getJSON("https://cparros.github.io/football-visualization-project/data/bakerMayfieldData.json", function (data) {
+//       // console.log(data);
+//       let weeks = [];
+//       let yards = [];
+//       let comps = [];
+//       let atts = [];
+//       let sacks = [];
+//       let ints = [];
+//       let tds = [];
+//       let opps = [];
+
+//       $.each(data, function (key, value) {
+//         let week = value.week;
+//         weeks.push(week);
+//         // console.log(weeks);
+
+//         let yard = value.PsYds;
+//         yards.push(yard);
+//         // console.log(yards);
+
+//         let comp = value.Cmp;
+//         comps.push(comp);
+//         // console.log(comps);
+
+//         let att = value.Att;
+//         atts.push(att);
+//         // console.log(atts);
+
+//         let sack = value.Sack;
+//         sacks.push(sack);
+//         // console.log(sacks);
+
+//         let int = value.Int;
+//         ints.push(int);
+//         // console.log(ints);
+
+//         let td = value.PsTD;
+//         tds.push(td);
+//         // console.log(tds);
+
+//         let opp = value.opponent;
+//         opps.push(opp);
+//         // console.log(opps);
+//       });
+      
+//       var ctx = $("#baker-chart");
+
+//       window.myChart = new Chart(ctx, {
+//         type: "line",
+//         data: {
+//           labels: weeks,
+//           datasets: [
+//             {
+//               label: "Baker Mayfield Yards Per Game/Week",
+//               data: yards,
+//               backgroundColor: ["red"],
+//               borderColor: ["red"],
+//               borderWidth: 3,
+//               tension: 0.2,
+//             },
+//             {
+//               label: "Baker Mayfield Completions Per Game/Week",
+//               data: comps,
+//               backgroundColor: ["green"],
+//               borderColor: ["green"],
+//               borderWidth: 3,
+//               tension: 0.2,
+//             },
+//             {
+//               label: "Baker Mayfield Pass Attempts Per Game/Week",
+//               data: atts,
+//               backgroundColor: ["orange"],
+//               borderColor: ["orange"],
+//               borderWidth: 3,
+//               tension: 0.2,
+//             },
+//             {
+//               label: "Baker Mayfield Sacks Per Game/Week",
+//               data: sacks,
+//               backgroundColor: ["aqua"],
+//               borderColor: ["aqua"],
+//               borderWidth: 3,
+//               tension: 0.2,
+//             },
+//             {
+//               label: "Baker Mayfield Interceptions Per Game/Week",
+//               data: ints,
+//               backgroundColor: ["pink"],
+//               borderColor: ["pink"],
+//               borderWidth: 3,
+//               tension: 0.2,
+//             },
+//             {
+//               label: "Baker Mayfield Passing TDs Per Game/Week",
+//               data: tds,
+//               backgroundColor: ["yellow"],
+//               borderColor: ["yellow"],
+//               borderWidth: 3,
+//               tension: 0.2,
+//             },
+//           ],
+//           options: {
+//             scales: {
+//               y: {
+//                 beginAtZero: true,
+//               },
+//             },
+//           },
+//         },
+//       });
+
+//       var ctxTwo = $("#baker-chart-two");
+//       window.myChart = new Chart(ctxTwo, {
+//         type: "radar",
+//         data: {
+//           labels: opps,
+//           datasets: [
+//             {
+//               label: "Baker Mayfield Interceptions Per Game/Week",
+//               data: ints,
+//               backgroundColor: ["#ff3c00"],
+//               borderColor: ["#ff3c00"],
+//               borderWidth: 3,
+//               tension: 0.2,
+//             },
+//             {
+//               label: "Baker Mayfield Passing TDs Per Game/Week",
+//               data: tds,
+//               backgroundColor: ["#964800"],
+//               borderColor: ["#964800"],
+//               borderWidth: 3,
+//               tension: 0.2,
+//             },
+//           ],
+//           options: {
+//             scales: {
+//               y: {
+//                 beginAtZero: true,
+//               },
+//             },
+//           },
+//         },
+//       });
+//     });
+//   }
+
+
+//   // getBakerData();
+// );
