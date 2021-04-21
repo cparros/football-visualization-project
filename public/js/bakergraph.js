@@ -1,6 +1,6 @@
 $(document).ready(function () {
   var xmlHttp = new XMLHttpRequest();
-  var url = "http://127.0.0.1:5500/data/bakerMayfieldData.json";
+  var url = "../data/bakerMayfieldData.json";
   xmlHttp.open("GET", url, true);
   xmlHttp.send();
   xmlHttp.onreadystatechange = function () {
