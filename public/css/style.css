@@ -201,12 +201,14 @@ td {
   background-color: rgb(255, 253, 253);
   margin: 1%;
   border-radius: 2%;
+  border: solid gray;
 }
 
 #baker-chart-two {
   background-color: rgb(255, 253, 253);
   margin: 1%;
   border-radius: 2%;
+  border: solid gray;
 }
 
 #baker-desc-three {
@@ -217,6 +219,7 @@ td {
   background-color: white;
   margin: 1%;
   border-radius: 2%;
+  border: solid gray;
 }
 
 .desc {
@@ -230,6 +233,7 @@ td {
 #bortles-two {
   height: 40%;
   border-radius: 2%;
+  border: solid gray;
 }
 
 #bortles-three {
@@ -260,12 +264,22 @@ td {
   background-color: rgb(255, 253, 253);
   margin: 1%;
   border-radius: 2%;
+  border: solid gray;
+}
+
+#derek-chart {
+  background-color: rgb(255, 253, 253);
+  margin: 1%;
+  border-radius: 2%;
+  border: solid gray;
+  
 }
 
 #derek-chart-two {
   background-color: rgb(255, 253, 253);
   margin: 1%;
   border-radius: 2%;
+  border: solid gray;
 }
 
 #derek-second-chart-desc {

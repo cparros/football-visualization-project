@@ -40,7 +40,7 @@ $(document).ready(function () {
         return game.opponent;
       });
 
-      var ctx = $("#baker-chart");
+      var ctx = $("#derek-chart");
 
       window.myChart = new Chart(ctx, {
         type: "line",
