@@ -215,6 +215,8 @@ td {
 
 #blake-chart {
   background-color: white;
+  margin: 1%;
+  border-radius: 2%;
 }
 
 .desc {
