@@ -49,7 +49,7 @@ $(document).ready(function () {
           labels: week,
           datasets: [
             {
-              label: "Blake Bortles Yards Per Game/Week",
+              label: "Baker Mayfield Yards Per Game/Week",
               data: yards,
               backgroundColor: ["red"],
               borderColor: ["red"],
@@ -57,7 +57,7 @@ $(document).ready(function () {
               tension: 0.2,
             },
             {
-              label: "Blake Bortles Completions Per Game/Week",
+              label: "Baker Mayfield Completions Per Game/Week",
               data: comp,
               backgroundColor: ["green"],
               borderColor: ["green"],
@@ -65,7 +65,7 @@ $(document).ready(function () {
               tension: 0.2,
             },
             {
-              label: "Blake Bortles Pass Attempts Per Game/Week",
+              label: "Baker Mayfield Pass Attempts Per Game/Week",
               data: att,
               backgroundColor: ["orange"],
               borderColor: ["orange"],
@@ -73,7 +73,7 @@ $(document).ready(function () {
               tension: 0.2,
             },
             {
-              label: "Blake Bortles Sacks Per Game/Week",
+              label: "Baker Mayfield Sacks Per Game/Week",
               data: sacks,
               backgroundColor: ["aqua"],
               borderColor: ["aqua"],
@@ -81,7 +81,7 @@ $(document).ready(function () {
               tension: 0.2,
             },
             {
-              label: "Blake Bortles Interceptions Per Game/Week",
+              label: "Baker Mayfield Interceptions Per Game/Week",
               data: ints,
               backgroundColor: ["pink"],
               borderColor: ["pink"],
@@ -89,7 +89,7 @@ $(document).ready(function () {
               tension: 0.2,
             },
             {
-              label: "Blake Bortles Passing TDs Per Game/Week",
+              label: "Baker Mayfield Passing TDs Per Game/Week",
               data: tds,
               backgroundColor: ["yellow"],
               borderColor: ["yellow"],
@@ -115,18 +115,18 @@ $(document).ready(function () {
           labels: opponent,
           datasets: [
             {
-              label: "Blake Bortles Interceptions Per Game/Week",
+              label: "Baker Mayfield Interceptions Per Game/Week",
               data: ints,
-              backgroundColor: ["#D8A328"],
-              borderColor: ["#D8A328"],
+              backgroundColor: ["#FF3C00"],
+              borderColor: ["#FF3C00"],
               borderWidth: 3,
               tension: 0.2,
             },
             {
-              label: "Blake Bortles Passing TDs Per Game/Week",
+              label: "Baker Mayfield Passing TDs Per Game/Week",
               data: tds,
-              backgroundColor: ["#136677"],
-              borderColor: ["#136677"],
+              backgroundColor: ["#311D00"],
+              borderColor: ["#311D00"],
               borderWidth: 3,
               tension: 0.2,
             },

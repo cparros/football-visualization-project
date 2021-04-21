@@ -1,6 +1,6 @@
 $(document).ready(function () {
   var xmlHttp = new XMLHttpRequest();
-  var url = "http://127.0.0.1:5500/data/derekCarrData.json";
+  var url = "https://cparros.github.io/football-visualization-project/data/derekCarrData.json";
   xmlHttp.open("GET", url, true);
   xmlHttp.send();
   xmlHttp.onreadystatechange = function () {
