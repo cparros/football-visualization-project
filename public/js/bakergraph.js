@@ -41,7 +41,7 @@ $(document).ready(function () {
       });
       
 
-      var ctx = $("#blake-chart");
+      var ctx = $("#baker-chart");
 
       window.myChart = new Chart(ctx, {
         type: "line",
@@ -108,7 +108,7 @@ $(document).ready(function () {
       });
 
 
-      var ctxTwo = $("#blake-chart-two");
+      var ctxTwo = $("#baker-chart-two");
       window.myChart = new Chart(ctxTwo, {
         type: "radar",
         data: {
