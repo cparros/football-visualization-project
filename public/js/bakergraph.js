@@ -1,6 +1,7 @@
 $(document).ready(function () {
   var xmlHttp = new XMLHttpRequest();
-  xmlHttp.open("GET", "../../data/bakerMayfieldData.json", false);
+  var url = "../../data/bakerMayfieldData.json";
+  xmlHttp.open("GET", url, true);
   xmlHttp.send();
   xmlHttp.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
