@@ -1,7 +1,7 @@
 $(document).ready(function () {
-  function getBakerData() {
+  // function getBakerData() {
     $.getJSON("../../data/bakerMayfieldData.json", function (data) {
-      console.log(data);
+      // console.log(data);
       let weeks = [];
       let yards = [];
       let comps = [];
@@ -14,37 +14,39 @@ $(document).ready(function () {
       $.each(data, function (key, value) {
         let week = value.week;
         weeks.push(week);
-        console.log(weeks);
+        // console.log(weeks);
 
         let yard = value.PsYds;
         yards.push(yard);
-        console.log(yards);
+        // console.log(yards);
 
         let comp = value.Cmp;
         comps.push(comp);
-        console.log(comps);
+        // console.log(comps);
 
         let att = value.Att;
         atts.push(att);
-        console.log(atts);
+        // console.log(atts);
 
         let sack = value.Sack;
         sacks.push(sack);
-        console.log(sacks);
+        // console.log(sacks);
 
         let int = value.Int;
         ints.push(int);
-        console.log(ints);
+        // console.log(ints);
 
         let td = value.PsTD;
         tds.push(td);
-        console.log(tds);
+        // console.log(tds);
 
         let opp = value.opponent;
         opps.push(opp);
-        console.log(opps);
+        // console.log(opps);
       });
+      
       var ctx = $("#baker-chart");
+
       window.myChart = new Chart(ctx, {
         type: "line",
         data: {
@@ -143,5 +145,7 @@ $(document).ready(function () {
       });
     });
   }
-  getBakerData();
-});
+
+
+  // getBakerData();
+);
